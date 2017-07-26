@@ -24,7 +24,7 @@
 
     <label>
         <span>联系地址 :</span>
-        <input id="address" type="text" value="{% if my_message.name == 'bobby' %}bobby has address{% endif %}" name="address" placeholder="请输入联系地址"/>
+        <input id="address" type="text" value="{% if my_message.name == 'bobby' %}{{ my_message.address }}{% endif %}" name="address" placeholder="请输入联系地址"/>
         <div class="error-msg"></div>
     </label>
 
