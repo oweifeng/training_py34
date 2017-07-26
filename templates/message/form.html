@@ -12,7 +12,7 @@
     </h1>
     <label>
         <span>姓名 :</span>
-        <input id="name" type="text" value="{% if my_message.name == 'bobby' %}bobby has name{% endif %}" name="name" class="error" placeholder="请输入您的姓名"/>
+        <input id="name" type="text" value="{% if my_message.name|slice:'5' == 'bobby' %}bobby has name{% else %}bobby not name{% endif %}" name="name" class="error" placeholder="请输入您的姓名"/>
         <div class="error-msg"></div>
     </label>
 
